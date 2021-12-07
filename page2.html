@@ -1,0 +1,200 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1NSI_tuple_liste</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <h1>Tuples et listes</h1>
+    <a href="page.html">Mode clair</a>
+    
+    <h2>1/ Introduction</h2>
+    <p>    Il est possible de "stocker" plusieurs grandeurs dans une même structure, ce type de structure
+        est appelé une séquence : ensemble fini et ordonné d’éléments indicés de 0 à n − 1 (si la séquence
+        comporte n éléments).
+    </p>
+    <p>
+        <b>Rappel : </b>nous avons vu dans les chapitres précédents qu’il est possible d’accéder à n’importe quel
+        caractère d’une chaîne de caractères à l’aide de son indice de position (le premier caractère étant
+        indexé 0).</p>
+        <iframe src="https://trinket.io/embed/python/d47fea496c" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    
+    <p>    Une chaîne de caractère est donc bien un type de structure fini et ordonné d’éléments indexés de
+        0 à len(chaine)-1, c’est à dire une séquence.</p>
+        <iframe src="https://trinket.io/embed/python/3d44a80c3c" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>    Il existe d’autres types de séquences que nous allons découvrir ici, notamment les n-uplets (encore
+        appelés tuples) et les listes.</p>
+    <h2>2/ Les tuples</h2>
+    <h3>2.1) Définitions</h3>
+    <p>    Un tuple est une collection d’éléments séparés par des virgules et généralement entouré de parenthèses même si ce n’est pas une obligation. Cela permet toutefois d’améliorer la lisibilité du code.
+        Le tuple est une séquence immuable (une fois déclaré, le tuple ne peut plus être modifié) d’objets
+        indicés qui peuvent être de tout type : entiers, flottants, chaînes de caractères...
+        </p>
+        <iframe src="https://trinket.io/embed/python/731863a113" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <h3>2.2) Afficher les éléments d’un tuple</h3>
+    <p>    Comme pour une chaîne de caractères, il est possible de parcourir directement les éléments du
+        tuple à l’aide d’une boucle du type : for i in tup</p>
+        <iframe src="https://trinket.io/embed/python/17d17a9ad7" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>    Et également par un parcours des indices :</p>
+    <iframe src="https://trinket.io/embed/python/7939efd1e1" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>      Comme avec une chaîne de caractères, la fonction len() prenant un tuple comme argument
+        renvoie le nombre d’éléments (longueur) du tuple.
+        </p>
+    <p><b>    Autre possibilité :</b></p>
+    <iframe src="https://trinket.io/embed/python/eb1e5190af" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <h3>2.3) Immuabilité d’un tuple    </h3>
+    <p>    Essayons de modifier un tuple prédéfini :</p>
+    <iframe src="https://trinket.io/embed/python/d808615200" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>    On constate que python refuse effectivement la modification d’un élément du tuple :</p>
+    <code>File "/Cours/NSI/Premiere/6-Tuples et listes/pg/tuples_erreurs.py", line 12, in <module>
+        tup[2]=19 <br>
+        TypeError: 'tuple' object does not support item assignment</code>
+    <h3>2.4) Quel peut être l’intérêt d’un tuple ?</h3>
+    <p>     Nous souhaitons écrire une fonction qui prend en argument deux nombres entiers et nous renvoie
+        le quotient et le reste de la division euclidienne du premier nombre par le second. Or nous avons
+        vu qu’une fonction ne retourne qu’un seul élément ! Il est possible de solutionner ce problème en
+        demandant à la fonction de renvoyer le résultat sous forme d’un tuple (quotient, reste).</p>
+        <iframe src="https://trinket.io/embed/python/e2c1cb9dac" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <h2>3/ Les listes    </h2>
+    <h3>3.1) Définition</h3>
+    <p>    Tout comme un tuple, une liste est une collection d’informations qui peuvent être de même type
+        ou de type différent. Les éléments de la liste sont séparés par des virgules et placés entre des crochets.
+        </p>
+    <p>   Création de listes par affectation :</p>
+    <iframe src="https://trinket.io/embed/python/e5f3cb286e" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>   La grande différence entre une liste et un tuple, c’est que la liste est modifiable</p>
+    <h3>3.2) Affichage des divers éléments de la liste</h3>
+    <p>    Comme pour les tuples, chaque élément est repéré dans la liste par un indice. Là aussi, l’indexation
+        commence à 0 et non pas à 1.</p>
+        <iframe src="https://trinket.io/embed/python/f5417d84e6" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>    Il est donc possible d’afficher un par un l’ensemble des éléments d’une liste à l’aide d’une boucle
+        for :</p>
+        <iframe src="https://trinket.io/embed/python/7f5ecbc05b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>    Il est possible d’itérer directement les éléments de la liste (comme pour les chaînes de caractères) :   </p>
+    <iframe src="https://trinket.io/embed/python/33606bb6da" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <h3>3.3) Ajout d’éléments dans une liste</h3>
+    <p>     Pour rajouter un élément dans une liste, par exemple ’juillet’ à notre liste liste_mois, il est
+        possible d’utiliser la méthode append() (to append signifie « ajouter »). L’élément est ajouté en fin
+        de liste. La méthode append() ne permet d’ajouter qu’un seul élément à la fois.</p>
+        <iframe src="https://trinket.io/embed/python/47662eed07" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>   plusieurs éléments peuvent être rajoutés en même temps :</p>
+    <iframe src="https://trinket.io/embed/python/b610f81960" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>    Attention, dans l’exemple qui suit le mois d’octobre sera rajouté en début de liste et non en fin
+        de liste :
+        </p>
+        <iframe src="https://trinket.io/embed/python/8b3e250f0e" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>    Il est également possible d’utiliser la méthode extend() qui permet de concaténer non pas un seul
+        élément mais une seconde liste.
+        </p>
+        <iframe src="https://trinket.io/embed/python/144d275ae0" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <h3>3.4) Suppression d’éléments dans une liste</h3>
+    <p>    Pour supprimer un élément dans une liste, par exemple l’élément de rang i, il est possible d’utiliser
+        la commande del (del signifie « delete »).</p>
+        <iframe src="https://trinket.io/embed/python/ad2006dc65" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>    Il est possible de supprimer un élément dans un tableau à partir non pas de son indice, mais de
+        sa valeur. La méthode remove() supprime uniquement la première occurrence trouvée.</p>
+        <iframe src="https://trinket.io/embed/python/1405538f3f" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>    Si l’élément n’est pas trouvé, un message d’erreur est retourné et le programme s’arrête, donc
+        bien s’assurer auparavant que l’élément à supprimer est présent dans la liste.</p>
+    <code>ValueError:list.remove(x: x not in list)
+    </code>
+    <iframe src="https://trinket.io/embed/python/ab7e0693dd" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <h3>3.5) Construction d’une liste par compréhension</h3>
+    <p>    Les compréhensions de listes fournissent un moyen de construire des listes de manière très concise.</p>
+    <p>     Une compréhension de liste consiste à placer entre crochets une expression suivie par une boucle
+        for (ou plusieurs boucles imbriquées) et éventuellement un test conditionnel pour filtrer.
+        <b>Exemple 1 :</b> supposons que l’on souhaite réaliser une liste contenant le carré des nombres de 1 à
+        10 :
+        </p>
+    <table>
+        <tr>
+            <td>Méthode classique</td>
+            
+            <td>Méthode par compréhension</td>
+            
+        </tr>
+        <tr>
+            <td><iframe src="https://trinket.io/embed/python/32c2cb37b7" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                </td>
+                
+            <td><iframe src="https://trinket.io/embed/python/eaa017519b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></td>
+        </tr>
+    </table>
+    <p>Il est possible de filtrer la liste précédente en ne prenant que le carré des nombres paires :</p>
+    <table>
+        <tr>
+            <td>Méthode classique</td>
+            <td>Méthode par compréhension</td>
+        </tr>
+        <tr>
+            <td><iframe src="https://trinket.io/embed/python/96f4589fd4" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></td>
+            <td><iframe src="https://trinket.io/embed/python/1967acf028" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></td>
+
+        </tr>
+
+    </table>
+    <p><b>Exemple 2 :</b> création de la liste des caractères qui se trouvent dans une chaîne de caractère (itérable),
+        dans l’ordre où ils sont rencontrés.</p>
+    <table><tr>
+        <td>Méthode classique</td>
+            <td>Méthode par compréhension</td>
+    </tr>
+    <tr>
+        <td><iframe src="https://trinket.io/embed/python/bbe507ee39" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></td>
+            <td><iframe src="https://trinket.io/embed/python/5153707f6c" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></td>
+    </tr>
+    </table>
+    <p>Création de la liste des voyelles qui se trouvent dans une chaîne de caractère (itérable)</p>
+    <table>
+        <tr>
+            <td>Méthode classique</td>
+                <td>Méthode par compréhension</td>
+        </tr>
+        <tr>
+            <td><iframe src="https://trinket.io/embed/python/29da2dd337" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></td>
+                <td><iframe src="https://trinket.io/embed/python/9a55c70851" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></td>
+
+        </tr>
+
+
+    </table>
+    <h3>3.6) Des listes de listes pour représenter des matrices</h3>
+    <p>Voici un exemple de liste de listes :</p>
+    <iframe src="https://trinket.io/embed/python/c87a9a6ac6" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>Pour des raisons de lisibilité, il est cependant plus commode de la représenter de la manière
+        suivante, sous forme matricielle :
+        </p>
+        <iframe src="https://trinket.io/embed/python/bb40704012" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>Pour cibler un élément de la matrice, on peut utiliser la notation avec des doubles crochets :
+        matrice[ligne][colonne]<br>
+        Attention : les numéros de ligne et colonne démarrent à 0.</p>
+        <iframe src="https://trinket.io/embed/python/50eb86abe5" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>Pour affecter à cet élément la valeur 10 :</p>
+    <iframe src="https://trinket.io/embed/python/482dd27a35" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>Pour parcourir l’ensemble des éléments de la matrice, il faut utiliser 2 boucles for imbriquées :</p>
+    <iframe src="https://trinket.io/embed/python/9143fe77c1" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <h3>3.7) Pour aller plus loin (non exigible)</h3>
+    <h4>a) Trancher des listes (Slices)</h4>
+    <p>On peut extraire d’un seul coup toute une partie de la liste : liste[a :b] renvoie la sous-liste des
+        éléments de rang a à b – 1 (l’élément de rang b est exclu). List[ :a] renvoie la sous-liste des éléments
+        de rang 0 à a – 1 (l’élément de rang a est exclu). List [a :] renvoie la sous-liste des éléments de rang
+        a inclus jusqu’au dernier.</p>
+        <iframe src="https://trinket.io/embed/python/7d6e4bb45c" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <h4>b) Des méthodes pour inverser et trier des listes</h4>
+        <p>La méthode reverse() permet d’inverser une liste et la méthode sort() permet de trier la liste.</p>
+        <iframe src="https://trinket.io/embed/python/e6ca86a588" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>Documentation en ligne python :<a href="https://docs.python.org/fr/3/tutorial/datastructures.html">https://docs.python.org/fr/3/tutorial/datastructures.html</a></p>
+    <h2>4] Exemple de trace d’une courbe en utilisant des listes et la
+        bibliothèque matplotlib.pyplot
+        </h2>
+    <p>Le programme suivant trace la courbe y=f(x2) en utilisant la bibliothèque matplolib.pyplot. Pour
+        cela il est nécessaire de remplir une liste des abscisses des points de la courbe nommée x et une liste
+        des ordonnées nommée y :
+        </p>
+        <iframe src="https://trinket.io/embed/python/b5aa369c62" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p>Courbe obtenue :</p>
+    <img src="image/Capture.PNG" alt="courbe" width="500">
+</body>
+</html>
